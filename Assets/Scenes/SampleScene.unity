@@ -279,6 +279,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &796634691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 796634693}
+  - component: {fileID: 796634692}
+  m_Layer: 0
+  m_Name: LightController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &796634692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796634691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b6d709be24254444b5b211c68d5dd05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_lightsToSpawn:
+  - {fileID: 3959122977376295526, guid: cdfbac9870bb0c84da4dc1d26ee66272, type: 3}
+  - {fileID: 5015657099507759093, guid: 7486c4befd3ba34448f6ac9fb3d916a1, type: 3}
+  - {fileID: 3215380244939083547, guid: c3738050f13d67043a46f1839ac79dbd, type: 3}
+  m_lightsList:
+  - {fileID: 3959122977376295526, guid: cdfbac9870bb0c84da4dc1d26ee66272, type: 3}
+  - {fileID: 5015657099507759093, guid: 7486c4befd3ba34448f6ac9fb3d916a1, type: 3}
+  - {fileID: 3215380244939083547, guid: c3738050f13d67043a46f1839ac79dbd, type: 3}
+--- !u!4 &796634693
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796634691}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.23, y: 2.37, z: -7.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &823309711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -683,7 +735,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1307749123
@@ -787,7 +839,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1604824124
@@ -1992,7 +2044,7 @@ PrefabInstance:
     - target: {fileID: 2932766897922402016, guid: 7d9316a93bc235646ac98f4fd49d53f0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.22
+      value: -7.75
       objectReference: {fileID: 0}
     - target: {fileID: 2932766897922402016, guid: 7d9316a93bc235646ac98f4fd49d53f0,
         type: 3}
@@ -2033,6 +2085,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566874170046758020, guid: 7d9316a93bc235646ac98f4fd49d53f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d9316a93bc235646ac98f4fd49d53f0, type: 3}
@@ -2102,6 +2159,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spot Light (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063029869859683022, guid: a2026ed3a4b1446468beef7b9026a3aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3063029869859683023, guid: a2026ed3a4b1446468beef7b9026a3aa,
         type: 3}
@@ -2323,7 +2385,7 @@ PrefabInstance:
     - target: {fileID: 390139213488935665, guid: 9ee59da7af83ed84fa19bbd304db7db5,
         type: 3}
       propertyPath: rangoDeAlerta
-      value: 39.76
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3585473219714430167, guid: 9ee59da7af83ed84fa19bbd304db7db5,
         type: 3}

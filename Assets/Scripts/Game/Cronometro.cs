@@ -6,7 +6,7 @@ using TMPro;
 
 public class Cronometro : MonoBehaviour
 {
-    [SerializeField] private GameObject gameObject;
+    [SerializeField] private GameObject gameObjectTimer; 
     public float timer = 0;
     public TextMeshProUGUI TimerPro;
     void Update()
@@ -17,7 +17,7 @@ public class Cronometro : MonoBehaviour
 
         if (timer < 0)
         {
-            Destroy(gameObject);
+            Destroy(gameObjectTimer);
         }
     }
 }
