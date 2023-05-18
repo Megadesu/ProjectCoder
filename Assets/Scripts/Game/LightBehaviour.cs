@@ -8,10 +8,14 @@ public class LightBehaviour : MonoBehaviour
 {
     [SerializeField] private Light[] m_lightsToSpawn;
     [SerializeField] private List<Light> m_lightsList;
+    public struct KeyData
+    {
+        public string color;
+        public bool Potion;
+    }
 
     //Tenemos que terminar de desarrollar las puertas
     private Dictionary<string, KeyData> m_keysDictonary = new Dictionary<string, KeyData>();
-
 
 
     [ContextMenu("Ola Viteh")]
@@ -21,11 +25,6 @@ public class LightBehaviour : MonoBehaviour
     }
 
 
-    public struct KeyData
-    {
-        public string color;
-        public bool hasKey;
-    }
 
     private void InstantiateAllLights()
     {
@@ -43,17 +42,17 @@ public class LightBehaviour : MonoBehaviour
         KeyData m_redKeyData = new KeyData()
         {
             color= "Red",
-            hasKey = false,
+            Potion = false,
         };
         KeyData m_blueKeyData = new KeyData()
         {
             color = "Blue",
-            hasKey = true,
+            Potion = true,
         };
         KeyData m_yellowKeyData = new KeyData()
         {
             color = "Yellow",
-            hasKey = false,
+            Potion = false,
         };
 
         m_keysDictonary.Add("Red", m_redKeyData);
@@ -77,7 +76,7 @@ public class LightBehaviour : MonoBehaviour
     {
         if (m_keysDictonary.TryGetValue("Red", out KeyData l_redKeyData))
         {
-            Debug.Log(l_redKeyData.color + l_redKeyData.hasKey);
+            Debug.Log(l_redKeyData.color + l_redKeyData.Potion);
 
         }
 
@@ -107,7 +106,7 @@ public class LightBehaviour : MonoBehaviour
     {
         if (m_keysDictonary.TryGetValue("Blue", out KeyData l_blueKeyData))
         {
-            Debug.Log(l_blueKeyData.color + l_blueKeyData.hasKey);
+            Debug.Log(l_blueKeyData.color + l_blueKeyData.Potion);
 
         }
 
