@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Menu : MonoBehaviour
+using UnityEngine.UI;
+public class MenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private Button m_playButton;
+    
     void Start()
     {
+        Debug.Log("");
         
     }
 
