@@ -35,7 +35,7 @@ public class PlayableCharacter : Entity
     {
         m_healthController = new HealthController(m_maxHealth);
     }
-    public void MoveCharacter(Vector3 p_direction)
+    protected void MoveCharacter(Vector3 p_direction)
     {
         transform.position += p_direction * m_speed * Time.deltaTime;
     }
