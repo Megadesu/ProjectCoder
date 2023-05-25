@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewEnemy : PlayableCharacter
+public class NewEnemy : PlayableCharacter, IHealthEntity
 {
 
     [SerializeField]private Transform m_target;
@@ -24,4 +24,13 @@ public class NewEnemy : PlayableCharacter
     {
         m_target = p_target;
     }
+
+
+    public override float GetHealth()
+    {
+
+        return m_healthController.GetCurrentHealth()/ m_healthController.MaxHealth;
+
+    }
+
 }
