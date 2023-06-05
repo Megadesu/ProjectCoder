@@ -38,11 +38,11 @@ public class PlayableCharacter : Entity
     [SerializeField] private Animator m_animator;
     [SerializeField] private float m_maxHealth;
     [SerializeField] private float m_speed;
-    protected HealthController m_healthController;
+    [SerializeField] private HealthSistem m_healthSistem;
 
     private void Awake()
     {
-        m_healthController = new HealthController(m_maxHealth);
+       m_healthSistem.Init();
     }
     protected void MoveCharacter(Vector3 p_direction)
     {
@@ -51,7 +51,7 @@ public class PlayableCharacter : Entity
 
     public virtual float GetHealth() {
 
-        return m_healthController.GetCurrentHealth();
+        return m_healthSistem.GetCurrentHealth();
     
     }
 }

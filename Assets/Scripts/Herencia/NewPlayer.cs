@@ -13,10 +13,10 @@ public class NewPlayer :PlayableCharacter, IHealthEntity
         var l_moveDir = new Vector3(l_horizontal, 0, l_vertical).normalized;
         MoveCharacter(l_moveDir);
     }
-    public float GetHealth() {
-      return m_healthController.GetCurrentHealth();
+    //public float GetHealth() {
+    //  return m_healthController.GetCurrentHealth();
     
-    }
+    //}
 
 }
 

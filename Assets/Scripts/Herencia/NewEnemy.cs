@@ -26,11 +26,11 @@ public class NewEnemy : PlayableCharacter, IHealthEntity
     }
 
 
-    public override float GetHealth()
-    {
+    //public override float GetHealth()
+    //{
 
-        return m_healthController.GetCurrentHealth()/ m_healthController.MaxHealth;
+    //    return m_healthController.GetCurrentHealth()/ m_healthController.MaxHealth;
 
-    }
+    //}
 
 }

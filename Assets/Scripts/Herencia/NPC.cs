@@ -16,6 +16,11 @@ public class NPC : Entity, IInteractable
         GetName();
         m_playableCharacter.GetHealth();
     }
+    [ContextMenu("Try get health")]
+    //private void TryGetHealth()
+    //{if
+    //    m_playableCharacter.GetHealth();
+    //}
 
     public bool IsInteractable { get;}
     public void Interact()
