@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class BarLife : MonoBehaviour
 {
-
+    
 
     public Image barraDeVida;
 
-    public float vidaActual;
+    public int vidaActual;
 
-    public float vidaMaxima;
+    public int vidaMaxima;
     void Update()
     {
-        barraDeVida.fillAmount = vidaActual / vidaMaxima;
+      
+       
     }
 }
