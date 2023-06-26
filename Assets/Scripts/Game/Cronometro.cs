@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -18,6 +19,12 @@ public class Cronometro : MonoBehaviour
         if (timer < 0)
         {
             Destroy(gameObject);
+
         }
+        
+    }
+    public void ChangeScene(string nombre)
+    {
+        SceneManager.LoadScene(nombre);
     }
 }

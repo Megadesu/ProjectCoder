@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ChangeLevel : MonoBehaviour
+public class MenuGameOver : MonoBehaviour
 {
-   
-    public void ChangeScene(string nombre)
+    public void Reiniciar(string nombre)
     {
-
         SceneManager.LoadScene(nombre);
-
     }
 }
